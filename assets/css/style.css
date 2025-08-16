@@ -1805,16 +1805,17 @@ body,html{
   flex-shrink: 0 !important;
 }
 
-/* File text on the right (blue like links) */
+/* File text on the right (always visible) */
 .item-title {
-  color: #1a73e8 !important;     /* link blue */
+  color: #1a73e8 !important;     /* blue link color */
   font-size: 15px !important;
   font-weight: 600 !important;
-  line-height: 1.2 !important;
   font-family: 'Inter', sans-serif !important;
   text-align: left !important;
-  
-  margin-left: 6px !important;   /* 👈 pushes text away from image */
+
+  flex: 1 !important;            /* take remaining space */
+  margin-left: 8px !important;   /* gap from image */
+  min-width: 60px !important;    /* always at least 60px wide */
   white-space: nowrap !important;
   overflow: hidden !important;
   text-overflow: ellipsis !important;
