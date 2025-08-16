@@ -1761,18 +1761,18 @@ body,html{
   display: grid !important;
   grid-template-columns: repeat(2, minmax(0, 1fr)) !important; /* phone: 2 per row */
   gap: 12px !important;
-  padding: 0 12px;
+  padding: 0 12px !important;
 }
 @media (min-width: 768px) { /* iPad/desktop: 4 per row */
   .mt-24 { grid-template-columns: repeat(4, minmax(0, 1fr)) !important; }
 }
 
-/* ===== Remove the inner/overlay box that shows as a black outline ===== */
+/* ===== Remove the old inner overlay box ===== */
 .page-item { 
   display: none !important; 
 }
 
-/* ===== Card (the only visible box) ===== */
+/* ===== Card (the visible box) ===== */
 .page-item-wrap {
   width: 100% !important;
   background: #ffffff !important;      
@@ -1782,7 +1782,7 @@ body,html{
   overflow: hidden !important;
 }
 
-/* Make the clickable area lay out image + text horizontally */
+/* ===== Content inside the card: image + text side by side ===== */
 .page-item-each {
   display: flex !important;
   align-items: center !important;
@@ -1795,27 +1795,27 @@ body,html{
   box-shadow: none !important;
 }
 
-/* Thumbnail on the left */
+/* ===== Thumbnail on the left ===== */
 .link-each-image {
   width: 60px !important;
   height: 60px !important;
   border-radius: 8px !important;
   object-fit: cover !important;
-  flex-shrink: 0 !important; /* image never shrinks */
-  margin-right: 10px !important; /* space between image and text */
+  flex-shrink: 0 !important;         /* don’t let image shrink */
+  margin-right: 10px !important;     /* space between image and text */
 }
 
-/* File text on the right (always visible) */
+/* ===== File text on the right ===== */
 .item-title {
-  color: #1a73e8 !important;   /* blue link color */
+  color: #1a73e8 !important;         /* blue link color */
   font-size: 15px !important;
   font-weight: 600 !important;
   font-family: 'Inter', sans-serif !important;
   text-align: left !important;
 
-  flex-grow: 1 !important;       /* let it take remaining space */
-  flex-basis: auto !important;   /* prevent shrinking to 0 */
-  min-width: 60px !important;    /* ensures text always shows */
+  flex-grow: 1 !important;           /* take remaining space */
+  flex-basis: auto !important;
+  min-width: 60px !important;        /* ensures text never vanishes */
   white-space: nowrap !important;
   overflow: hidden !important;
   text-overflow: ellipsis !important;
