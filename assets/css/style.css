@@ -1783,8 +1783,8 @@ body,html{
 
 /* Image on the left */
 .link-each-image {
-  width: 90px;   /* smaller picture */
-  height: 30px;
+  width: 70px;   /* smaller picture */
+  height: 70px;
   object-fit: cover;
   border-radius: 8px;
 }
