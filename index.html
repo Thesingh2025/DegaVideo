@@ -1,212 +1,165 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <link href="assets/css/style.css" rel="stylesheet">
-    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0'>
-    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/webp">
-    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon.png">
-    <link rel="icon" href="assets/images/favicon.png" type="image/webp">
-    <title>Dega Video</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <meta charset="utf-8">
+  <link href="assets/css/style.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+  <link rel="shortcut icon" href="assets/images/favicon.png" type="image/webp">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/favicon.png">
+  <link rel="icon" href="assets/images/favicon.png" type="image/webp">
+  <title>Dega Video</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Snowfall Background Animation -->
-    <section class="animated-background">
-        <div id="stars1"></div>
-        <div id="stars2"></div>
-        <div id="stars3"></div>
-    </section>
-    <!-- End of Snowfall Background Animation -->
+  <!-- Keep this section if you still have the stars CSS. If not, it's harmless. -->
+  <section class="animated-background">
+    <div id="stars1"></div>
+    <div id="stars2"></div>
+    <div id="stars3"></div>
+  </section>
 
-    <div class="min-h-full flex-h-center" id="background_div">
-        <input type="hidden" value="https://bio.link" id="app-url">
-        <input type="hidden" value="null" id="is-featured">
-        <canvas id="bg-canvas" class="background-overlay"></canvas>
+  <div class="container">
+    <!-- Top: profile, title, status, socials -->
+    <div class="top-center">
+      <img class="display-image" src="assets/images/IMG_3235.jpeg" alt="Display Image">
+      <h2 class="page-title">Dega Video</h2>
 
-        <div class="mt-48 page-full-wrap relative">
-            <input type="hidden" value="creator-page" id="page-type">
-            <!-- Cover + Profile Section -->
-<div class="text-center mt-4">
-  <img src="assets/images/IMG_3235.jpeg" alt="Display Image" class="rounded-full mx-auto mb-4" style="width: 120px; height: 120px; object-fit: cover;">
-</div>
+      <div class="active-row">
+        <span class="green-dot"></span>
+        <span class="active-text">Active Now</span>
+      </div>
 
-<!-- Page Title -->
-<h2 class="page-title page-text-color page-text-font mt-16 text-center" style="font-size: 28px;">
-  Dega Video
-</h2>
-</div>
-
-            <!-- Active Now -->
-            <div style="display: flex; justify-content: center; align-items: center; margin-top: 10px;">
-                <div class="sparkle-dot"></div>
-                <div style="color: white; font-family: 'Inter', sans-serif; font-size: 14px;">Active Now</div>
-            </div>
-
-            <!-- Social Icons -->
-            <div class="social-bounce">
-                <a href="https://t.me/+AJ7uszRdLkJiMTVi" target="_blank" style="display: flex; align-items: center; color: white; font-family: 'Inter', sans-serif; font-size: 14px; text-decoration: none; gap: 6px;">
-                    <span>Telegram</span>
-                    <img src="https://i.postimg.cc/DZ6kGN17/icons8-telegram-150.png" alt="Telegram" style="width: 18px; height: 18px; filter: brightness(0) invert(1);">
-                </a>
-                <a href="https://instagram.com/alyx_play" target="_blank" style="display: flex; align-items: center; color: white; font-family: 'Inter', sans-serif; font-size: 14px; text-decoration: none; gap: 6px;">
-                    <span>Instagram</span>
-                    <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram" style="width: 18px; height: 18px; filter: brightness(0) invert(1);">
-                </a>
-            </div>
-
-            <!-- Search Bar -->
-            <div class="text-center mt-8 sticky-search">
-    <span style="display: flex; align-items: center; background-color: #292929; padding: 10px 14px; border-radius: 25px; font-family: 'Inter', sans-serif; font-size: 16px; color: #9D9D9D; gap: 6px;">
-        <svg ...>...</svg>
-        <span>File-</span>
-        <input 
-            type="text" 
-            id="searchInput" 
-            oninput="filterPosts()" 
-            placeholder="Search File Here"
-            style="background-color: transparent; color: white; border: none; outline: none; font-family: 'Inter', sans-serif; font-size: 16px; width: auto;"
-        />
-    </span>
-</div>
-
-            <!-- File Links -->
-<div class="file-grid">
-    <!-- File-17 -->
-    <a target="_blank" class="file-card" href="https://1024terabox.com/s/1mCvNIiD5Usa_H0-ISzH3tQ">
-        <img src="https://i.postimg.cc/RVJ9H7Wk/IMG-3738.jpg" alt="File-17 Image">
-        <span>File-17</span>
-    </a>
-
-    <!-- File-16 -->
-    <a target="_blank" class="file-card" href="https://1024terabox.com/s/1mCvNIiD5Usa_H0-ISzH3tQ">
-        <img src="https://i.postimg.cc/QNyhC4dg/IMG-3737.jpg" alt="File-16 Image">
-        <span>File-16</span>
-    </a>
-
-    <!-- File-15 -->
-    <a target="_blank" class="file-card" href="https://1024terabox.com/s/18UHeM_-SnU5ZcXoyK8Nidw">
-        <img src="https://i.postimg.cc/ZRY4BXNH/IMG-3736.jpg" alt="File-15 Image">
-        <span>File-15</span>
-    </a>
-
-    <!-- File-14 -->
-    <a target="_blank" class="file-card" href="https://1024terabox.com/s/11Hlj-_TQnIlci2P3wFILKg">
-        <img src="https://i.postimg.cc/GtHRzYqs/IMG-3735.jpg" alt="File-14 Image">
-        <span>File-14</span>
-    </a>
-
-    <!-- File-13 -->
-    <a target="_blank" class="file-card" href="https://1024terabox.com/s/1CMAecgyTlV1PaXW2-QJ-bw">
-        <img src="https://i.postimg.cc/rs3kHmPZ/IMG-3734.jpg" alt="File-13 Image">
-        <span>File-13</span>
-    </a>
-
-    <!-- File-12 -->
-    <a target="_blank" class="file-card" href="https://1024terabox.com/s/1oi6BhxC9t2sxvjfAVTbtbA">
-        <img src="https://i.postimg.cc/3RL7g9CT/IMG-3733.jpg" alt="File-12 Image">
-        <span>File-12</span>
-    </a>
-
-    <!-- File-11 -->
-    <a target="_blank" class="file-card" href="https://1024terabox.com/s/11h14V8L-usf9GKO0Jkn2Sw">
-        <img src="https://i.postimg.cc/1zryzy84/IMG-3732.jpg" alt="File-11 Image">
-        <span>File-11</span>
-    </a>
-
-    <!-- File-10 -->
-    <a target="_blank" class="file-card" href="https://1024terabox.com/s/1KrzOLdJzF7g9T-mIsSJ0Jw">
-        <img src="https://i.postimg.cc/bv3xMKrr/IMG-3731.jpg" alt="File-10 Image">
-        <span>File-10</span>
-    </a>
-
-    <!-- File-9 -->
-    <a target="_blank" class="file-card" href="https://1024terabox.com/s/11E5-fIxM401wrAhMaeNI6A">
-        <img src="https://i.postimg.cc/HLp06ppF/IMG-3730.jpg" alt="File-9 Image">
-        <span>File-9</span>
-    </a>
-
-    <!-- File-8 -->
-    <a target="_blank" class="file-card" href="https://1024terabox.com/s/1TNUxd4V81obyZn0mVjg2Ow">
-        <img src="https://i.postimg.cc/CxCHCZVj/IMG-3729.jpg" alt="File-8 Image">
-        <span>File-8</span>
-    </a>
-
-    <!-- File-7 -->
-    <a target="_blank" class="file-card" href="https://1024terabox.com/s/1VNbZal0eH_093qE7XDa7cw">
-        <img src="https://i.postimg.cc/bvrWb8Jm/IMG-3728.jpg" alt="File-7 Image">
-        <span>File-7</span>
-    </a>
-
-    <!-- File-6 -->
-    <a target="_blank" class="file-card" href="https://1024terabox.com/s/1JeUsFdxO9Wz1cf0BBXFY-w">
-        <img src="https://i.postimg.cc/d0fXjXZw/IMG-3727.jpg" alt="File-6 Image">
-        <span>File-6</span>
-    </a>
-
-    <!-- File-5 -->
-    <a target="_blank" class="file-card" href="https://1024terabox.com/s/150sEkDYSEwl4uLMaNSoYZw">
-        <img src="https://i.postimg.cc/sgVtj5Rd/IMG-3726.jpg" alt="File-5 Image">
-        <span>File-5</span>
-    </a>
-
-    <!-- File-4 -->
-    <a target="_blank" class="file-card" href="https://1024terabox.com/s/1mYVYydOcGx2Zt9UsqaScCA">
-        <img src="https://i.postimg.cc/sDPkCwq4/IMG-3725.jpg" alt="File-4 Image">
-        <span>File-4</span>
-    </a>
-
-    <!-- File-3 -->
-    <a target="_blank" class="file-card" href="https://1024terabox.com/s/1PzOt1XUjc8lFilRQHXpoOQ">
-        <img src="https://i.postimg.cc/zXYsQ9tf/IMG-3724.jpg" alt="File-3 Image">
-        <span>File-3</span>
-    </a>
-
-    <!-- File-2 -->
-    <a target="_blank" class="file-card" href="https://1024terabox.com/s/1W17Hqnna3m59M2rFu8iFUw">
-        <img src="https://i.postimg.cc/9QJsrzW4/IMG-3723.jpg" alt="File-2 Image">
-        <span>File-2</span>
-    </a>
-
-    <!-- File-1 -->
-    <a target="_blank" class="file-card" href="https://1024terabox.com/s/1N4SxnuVY5yANbVvPPd7o9Q">
-        <img src="https://i.postimg.cc/v8nR3Qvj/IMG-3722.jpg" alt="File-1 Image">
-        <span>File-1</span>
-    </a>
-</div>
-            </div>
-        </div>
+      <div class="social-bounce">
+        <a href="https://t.me/+AJ7uszRdLkJiMTVi" target="_blank">
+          <span>Telegram</span>
+          <img class="social-icon" src="https://i.postimg.cc/DZ6kGN17/icons8-telegram-150.png" alt="Telegram">
+        </a>
+        <a href="https://instagram.com/alyx_play" target="_blank">
+          <span>Instagram</span>
+          <img class="social-icon" src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram">
+        </a>
+      </div>
     </div>
 
-    <!-- JavaScript for search and sticky animation -->
-    <script>
-        function filterPosts() {
-            const input = document.getElementById("searchInput").value.trim().toLowerCase();
-            const allPosts = document.querySelectorAll(".page-item-wrap");
+    <!-- Sticky, slim, almost-full-width search bar -->
+    <div class="sticky-search">
+      <div class="search-bar">
+        <!-- search icon -->
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="#9D9D9D" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28h.79l5 5L20.49 19l-5-5zM5 9.5C5 7.01 7.01 5 9.5 5S14 7.01 14 9.5 11.99 14 9.5 14 5 11.99 5 9.5z"/>
+        </svg>
+        <label for="searchInput">File-</label>
+        <input
+          id="searchInput"
+          type="text"
+          placeholder="Search File Here"
+          oninput="filterFiles()"
+          autocomplete="off"
+        />
+      </div>
+    </div>
 
-            allPosts.forEach(post => {
-                const title = post.querySelector(".item-title").textContent.trim().toLowerCase();
-                if (input === "") {
-                    post.style.display = "block";
-                } else {
-                    post.style.display = title === `file-${input}` ? "block" : "none";
-                }
-            });
-        }
+    <!-- File grid: 2 per row on phones, 4 on bigger screens -->
+    <div class="file-grid" id="fileGrid">
+      <!-- 17 -->
+      <a class="file-card" target="_blank" href="https://1024terabox.com/s/1mCvNIiD5Usa_H0-ISzH3tQ">
+        <img src="https://i.postimg.cc/RVJ9H7Wk/IMG-3738.jpg" alt="File-17 Image">
+        <span>File-17</span>
+      </a>
+      <!-- 16 -->
+      <a class="file-card" target="_blank" href="https://1024terabox.com/s/1mCvNIiD5Usa_H0-ISzH3tQ">
+        <img src="https://i.postimg.cc/QNyhC4dg/IMG-3737.jpg" alt="File-16 Image">
+        <span>File-16</span>
+      </a>
+      <!-- 15 -->
+      <a class="file-card" target="_blank" href="https://1024terabox.com/s/18UHeM_-SnU5ZcXoyK8Nidw">
+        <img src="https://i.postimg.cc/ZRY4BXNH/IMG-3736.jpg" alt="File-15 Image">
+        <span>File-15</span>
+      </a>
+      <!-- 14 -->
+      <a class="file-card" target="_blank" href="https://1024terabox.com/s/11Hlj-_TQnIlci2P3wFILKg">
+        <img src="https://i.postimg.cc/GtHRzYqs/IMG-3735.jpg" alt="File-14 Image">
+        <span>File-14</span>
+      </a>
+      <!-- 13 -->
+      <a class="file-card" target="_blank" href="https://1024terabox.com/s/1CMAecgyTlV1PaXW2-QJ-bw">
+        <img src="https://i.postimg.cc/rs3kHmPZ/IMG-3734.jpg" alt="File-13 Image">
+        <span>File-13</span>
+      </a>
+      <!-- 12 -->
+      <a class="file-card" target="_blank" href="https://1024terabox.com/s/1oi6BhxC9t2sxvjfAVTbtbA">
+        <img src="https://i.postimg.cc/3RL7g9CT/IMG-3733.jpg" alt="File-12 Image">
+        <span>File-12</span>
+      </a>
+      <!-- 11 -->
+      <a class="file-card" target="_blank" href="https://1024terabox.com/s/11h14V8L-usf9GKO0Jkn2Sw">
+        <img src="https://i.postimg.cc/1zryzy84/IMG-3732.jpg" alt="File-11 Image">
+        <span>File-11</span>
+      </a>
+      <!-- 10 -->
+      <a class="file-card" target="_blank" href="https://1024terabox.com/s/1KrzOLdJzF7g9T-mIsSJ0Jw">
+        <img src="https://i.postimg.cc/bv3xMKrr/IMG-3731.jpg" alt="File-10 Image">
+        <span>File-10</span>
+      </a>
+      <!-- 9 -->
+      <a class="file-card" target="_blank" href="https://1024terabox.com/s/11E5-fIxM401wrAhMaeNI6A">
+        <img src="https://i.postimg.cc/HLp06ppF/IMG-3730.jpg" alt="File-9 Image">
+        <span>File-9</span>
+      </a>
+      <!-- 8 -->
+      <a class="file-card" target="_blank" href="https://1024terabox.com/s/1TNUxd4V81obyZn0mVjg2Ow">
+        <img src="https://i.postimg.cc/CxCHCZVj/IMG-3729.jpg" alt="File-8 Image">
+        <span>File-8</span>
+      </a>
+      <!-- 7 -->
+      <a class="file-card" target="_blank" href="https://1024terabox.com/s/1VNbZal0eH_093qE7XDa7cw">
+        <img src="https://i.postimg.cc/bvrWb8Jm/IMG-3728.jpg" alt="File-7 Image">
+        <span>File-7</span>
+      </a>
+      <!-- 6 -->
+      <a class="file-card" target="_blank" href="https://1024terabox.com/s/1JeUsFdxO9Wz1cf0BBXFY-w">
+        <img src="https://i.postimg.cc/d0fXjXZw/IMG-3727.jpg" alt="File-6 Image">
+        <span>File-6</span>
+      </a>
+      <!-- 5 -->
+      <a class="file-card" target="_blank" href="https://1024terabox.com/s/150sEkDYSEwl4uLMaNSoYZw">
+        <img src="https://i.postimg.cc/sgVtj5Rd/IMG-3726.jpg" alt="File-5 Image">
+        <span>File-5</span>
+      </a>
+      <!-- 4 -->
+      <a class="file-card" target="_blank" href="https://1024terabox.com/s/1mYVYydOcGx2Zt9UsqaScCA">
+        <img src="https://i.postimg.cc/sDPkCwq4/IMG-3725.jpg" alt="File-4 Image">
+        <span>File-4</span>
+      </a>
+      <!-- 3 -->
+      <a class="file-card" target="_blank" href="https://1024terabox.com/s/1PzOt1XUjc8lFilRQHXpoOQ">
+        <img src="https://i.postimg.cc/zXYsQ9tf/IMG-3724.jpg" alt="File-3 Image">
+        <span>File-3</span>
+      </a>
+      <!-- 2 -->
+      <a class="file-card" target="_blank" href="https://1024terabox.com/s/1W17Hqnna3m59M2rFu8iFUw">
+        <img src="https://i.postimg.cc/9QJsrzW4/IMG-3723.jpg" alt="File-2 Image">
+        <span>File-2</span>
+      </a>
+      <!-- 1 -->
+      <a class="file-card" target="_blank" href="https://1024terabox.com/s/1N4SxnuVY5yANbVvPPd7o9Q">
+        <img src="https://i.postimg.cc/v8nR3Qvj/IMG-3722.jpg" alt="File-1 Image">
+        <span>File-1</span>
+      </a>
+    </div>
+  </div>
 
-        window.addEventListener('scroll', function () {
-            const bar = document.querySelector('.sticky-search');
-            if (window.scrollY > 50) {
-                bar.style.transform = 'scale(1.02)';
-                bar.style.boxShadow = '0 4px 10px rgba(0, 0, 0, 0.2)';
-            } else {
-                bar.style.transform = 'scale(1)';
-                bar.style.boxShadow = 'none';
-            }
-        });
-    </script>
+  <script>
+    function filterFiles() {
+      const q = document.getElementById('searchInput').value.trim().toLowerCase();
+      document.querySelectorAll('.file-card').forEach(card => {
+        const title = card.querySelector('span').textContent.toLowerCase();
+        card.style.display = (q === '' || title.includes(q)) ? 'flex' : 'none';
+      });
+    }
+  </script>
 
-    <!-- Cloudflare Web Analytics -->
-    <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "3b9c4ef5423e4b1f82cfd8a16de419c6"}'></script>
+  <!-- Cloudflare Web Analytics -->
+  <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token":"3b9c4ef5423e4b1f82cfd8a16de419c6"}'></script>
 </body>
 </html>
