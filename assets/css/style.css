@@ -1769,7 +1769,7 @@ body,html{
   background: #1e1e1e;   /* dark box background */
   border-radius: 12px;   /* curved corners */
   padding: 10px 15px;
-  width: 260px;          /* box width */
+  width: 130px;          /* box width */
   display: flex;
   align-items: center;   /* align image + text vertically */
   gap: 12px;             /* space between image and text */
@@ -1783,15 +1783,15 @@ body,html{
 
 /* Image on the left */
 .link-each-image {
-  width: 100px;   /* smaller picture */
-  height: 70px;
+  width: 70px;   /* smaller picture */
+  height: 40px;
   object-fit: cover;
   border-radius: 8px;
 }
 
 /* File text on the right */
 .item-title {
-  font-size: 16px;
+  font-size: 10px;
   color: white;
   font-family: 'Inter', sans-serif;
   text-align: left;
