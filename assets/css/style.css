@@ -1759,39 +1759,40 @@ body,html{
 /* Container for all file boxes */
 .mt-24 {
   display: flex;
-  flex-wrap: wrap;   /* allows items to go to next line */
+  flex-wrap: wrap;   /* allows wrapping to next line */
   gap: 20px;         /* space between boxes */
-  justify-content: center; /* center them */
+  justify-content: center; /* center them in the page */
 }
 
 /* Each file box */
 .page-item-wrap {
-  background: #ffffff10; 
-  border-radius: 10px;
-  padding: 10px;
-  width: 180px;   /* fixed width for each box */
-  text-align: center;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  background: #1e1e1e;   /* dark box background */
+  border-radius: 12px;   /* curved corners */
+  padding: 10px 15px;
+  width: 260px;          /* box width */
+  display: flex;
+  align-items: center;   /* align image + text vertically */
+  gap: 12px;             /* space between image and text */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
   transition: transform 0.2s ease-in-out;
 }
 
 .page-item-wrap:hover {
-  transform: scale(1.05);
+  transform: scale(1.03);
 }
 
-/* Image inside the box */
+/* Image on the left */
 .link-each-image {
-  width: 160px;   /* fix image width */
-  height: 100px;  /* fix image height */
-  object-fit: cover; /* keeps proportion but crops if needed */
-  border-radius: 6px;
+  width: 100px;   /* smaller picture */
+  height: 70px;
+  object-fit: cover;
+  border-radius: 8px;
 }
 
-/* File text under image */
+/* File text on the right */
 .item-title {
-  display: block;
-  margin-top: 8px;
-  font-size: 15px;
+  font-size: 16px;
   color: white;
   font-family: 'Inter', sans-serif;
+  text-align: left;
 }
