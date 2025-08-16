@@ -1805,24 +1805,23 @@ body,html{
   flex-shrink: 0 !important;
 }
 
-/* File text on the right (always visible) */
+/* Hide the empty overlay box that blocks text */
+.page-item {
+  display: none !important;
+}
+
+/* File text (always visible, beside the image) */
 .item-title {
-  color: #1a73e8 !important;     /* blue link color */
+  color: #1a73e8 !important;   /* blue link color */
   font-size: 15px !important;
   font-weight: 600 !important;
   font-family: 'Inter', sans-serif !important;
   text-align: left !important;
 
-  flex: 1 !important;            /* take remaining space */
-  margin-left: 8px !important;   /* gap from image */
-  min-width: 60px !important;    /* always at least 60px wide */
+  margin-left: 10px !important; /* push text away from image */
+  position: relative !important;
+  z-index: 2 !important;        /* always on top */
   white-space: nowrap !important;
   overflow: hidden !important;
   text-overflow: ellipsis !important;
-}
-
-/* Optional: tighter rows on very small phones */
-@media (max-width: 360px) {
-  .link-each-image { width: 52px !important; height: 52px !important; }
-  .item-title { font-size: 14px !important; }
 }
