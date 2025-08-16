@@ -274,9 +274,16 @@ body, html {
 }
 .file-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(4, 1fr); /* default = 4 per row */
   gap: 15px;
   margin-top: 20px;
+}
+
+/* For phones (max 600px wide) → 2 per row */
+@media (max-width: 600px) {
+  .file-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 .file-card {
