@@ -261,3 +261,18 @@ body, html {
     height: 25px; /* slightly smaller than span to fit nicely */
     width: auto;
 }
+/* Fix spacing inside search bar */
+.sticky-search span {
+    gap: 2px !important; /* almost no gap */
+    padding: 4px 10px;   /* tighter box */
+}
+
+.sticky-search span label {
+    margin: 0 !important;  /* remove extra margin on "File-" text */
+    padding: 0 !important; /* remove extra padding */
+}
+
+.sticky-search input#searchInput {
+    margin: 0 !important;  /* no extra space */
+    padding: 0 5px;        /* just small inner padding */
+}
