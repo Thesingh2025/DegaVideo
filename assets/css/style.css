@@ -314,4 +314,6 @@ body, html {
 .file-card span {
   font-size: 16px;
   font-weight: 500;
+  color: #0066cc;         /* classic blue link */
+  text-decoration: underline;
 }
