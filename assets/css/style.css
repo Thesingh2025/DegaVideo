@@ -1774,12 +1774,12 @@ body,html{
 
 /* ===== Card (the only visible box) ===== */
 .page-item-wrap {
-  width: 100% !important;              /* fill the grid cell */
-  background: #ffffff !important;      /* white card */
+  width: 100% !important;
+  background: #ffffff !important;      
   border-radius: 12px !important;
   border: none !important;
   box-shadow: 0 4px 12px rgba(0,0,0,0.12) !important;
-  overflow: hidden !important;          /* trims children edges */
+  overflow: hidden !important;
 }
 
 /* Make the clickable area lay out image + text horizontally */
@@ -1789,38 +1789,32 @@ body,html{
   gap: 10px !important;
   padding: 10px 12px !important;
   text-decoration: none !important;
-  background: transparent !important;   /* ensure no inner box */
+  background: transparent !important;
   border: none !important;
   outline: none !important;
   width: 100% !important;
   box-shadow: none !important;
 }
 
-/* Thumbnail on the left (compact but clean) */
+/* Thumbnail on the left */
 .link-each-image {
   width: 60px !important;
   height: 60px !important;
   border-radius: 8px !important;
-  object-fit: cover !important;  /* keeps it looking good in the square */
+  object-fit: cover !important;
   flex-shrink: 0 !important;
 }
 
-/* Hide the empty overlay box that blocks text */
-.page-item {
-  display: none !important;
-}
-
-/* File text (always visible, beside the image) */
+/* File text on the right */
 .item-title {
-  color: #1a73e8 !important;   /* blue link color */
+  color: #1a73e8 !important;
   font-size: 15px !important;
   font-weight: 600 !important;
   font-family: 'Inter', sans-serif !important;
   text-align: left !important;
 
-  margin-left: 10px !important; /* push text away from image */
-  position: relative !important;
-  z-index: 2 !important;        /* always on top */
+  flex: 1 !important;
+  margin: 0 !important;
   white-space: nowrap !important;
   overflow: hidden !important;
   text-overflow: ellipsis !important;
