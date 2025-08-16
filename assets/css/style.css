@@ -228,10 +228,10 @@ body, html {
 /* Sticky, wide and short search bar */
 .sticky-search {
     position: sticky;
-    top: 10px; /* distance from top */
+    top: 10px;
     z-index: 999;
     display: flex;
-    justify-content: center; /* center whole bar */
+    justify-content: center;
     width: 100%;
     padding: 5px 0;
 }
@@ -239,23 +239,22 @@ body, html {
 .sticky-search span {
     display: flex;
     align-items: center;
-    justify-content: center; /* center content inside */
     background-color: #292929;
-    padding: 4px 16px;
+    padding: 4px 12px;
     border-radius: 25px;
-    gap: 6px; /* small gap between File- and input */
-    width: 98%; /* full screen width */
-    max-width: 1200px;
+    gap: 5px; /* ONLY 5px gap between "File-" and input */
+    width: auto; /* shrink to fit */
     box-sizing: border-box;
     font-size: 16px;
-    height: 33px; /* slim */
+    height: 33px;
 }
 
 .sticky-search span label {
     margin: 0;
     padding: 0;
     color: white;
-    font-weight: 500; /* optional: make "File-" stand out */
+    font-weight: 500;
+    white-space: nowrap; /* keep "File-" tight */
 }
 
 .sticky-search input#searchInput {
@@ -266,6 +265,7 @@ body, html {
     font-family: 'Inter', sans-serif;
     font-size: 16px;
     height: 25px;
-    width: 200px; /* fixed size instead of flex */
-    text-align: left; /* input text aligned normally */
+    width: 200px;   /* fixed size, so it doesn’t push away */
+    margin: 0;
+    padding: 0 5px;
 }
