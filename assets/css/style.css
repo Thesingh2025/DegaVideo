@@ -1786,7 +1786,6 @@ body,html{
 .page-item-each {
   display: flex !important;
   align-items: center !important;
-  gap: 10px !important;
   padding: 10px 12px !important;
   text-decoration: none !important;
   background: transparent !important;
@@ -1802,19 +1801,21 @@ body,html{
   height: 60px !important;
   border-radius: 8px !important;
   object-fit: cover !important;
-  flex-shrink: 0 !important;
+  flex-shrink: 0 !important; /* image never shrinks */
+  margin-right: 10px !important; /* space between image and text */
 }
 
-/* File text on the right */
+/* File text on the right (always visible) */
 .item-title {
-  color: #1a73e8 !important;
+  color: #1a73e8 !important;   /* blue link color */
   font-size: 15px !important;
   font-weight: 600 !important;
   font-family: 'Inter', sans-serif !important;
   text-align: left !important;
 
-  flex: 1 !important;
-  margin: 0 !important;
+  flex-grow: 1 !important;       /* let it take remaining space */
+  flex-basis: auto !important;   /* prevent shrinking to 0 */
+  min-width: 60px !important;    /* ensures text always shows */
   white-space: nowrap !important;
   overflow: hidden !important;
   text-overflow: ellipsis !important;
