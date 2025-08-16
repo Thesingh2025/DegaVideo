@@ -1756,42 +1756,70 @@ body,html{
   0%, 100% { transform: scale(1); opacity: 1; }
   50% { transform: scale(1.1); opacity: 0.7; }
 }
-/* Container for all file boxes */
+/* ===== Layout: 2 columns on phone, 4 on tablet/desktop ===== */
 .mt-24 {
-  display: flex;
-  flex-wrap: wrap;   /* wrap to next row */
-  gap: 12px;         /* smaller space between boxes */
-  justify-content: center;
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important; /* phone: 2 per row */
+  gap: 12px !important;
+  padding: 0 12px;
+}
+@media (min-width: 768px) { /* iPad/desktop: 4 per row */
+  .mt-24 { grid-template-columns: repeat(4, minmax(0, 1fr)) !important; }
 }
 
-/* Each file box */
+/* ===== Remove the inner/overlay box that shows as a black outline ===== */
+.page-item { 
+  display: none !important; 
+}
+
+/* ===== Card (the only visible box) ===== */
 .page-item-wrap {
-  background: transparent;   /* remove white background */
-  border-radius: 10px;
-  padding: 6px 10px;
-  width: 100px;          /* smaller box width */
-  display: flex;
-  align-items: center;
-  gap: 8px;              /* space between image and text */
-  transition: transform 0.2s ease-in-out;
+  width: 100% !important;              /* fill the grid cell */
+  background: #ffffff !important;      /* white card */
+  border-radius: 12px !important;
+  border: none !important;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12) !important;
+  overflow: hidden !important;          /* trims children edges */
 }
 
-.page-item-wrap:hover {
-  transform: scale(1.05);
+/* Make the clickable area lay out image + text horizontally */
+.page-item-each {
+  display: flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+  padding: 10px 12px !important;
+  text-decoration: none !important;
+  background: transparent !important;   /* ensure no inner box */
+  border: none !important;
+  outline: none !important;
+  width: 100% !important;
+  box-shadow: none !important;
 }
 
-/* Image inside the box */
+/* Thumbnail on the left (compact but clean) */
 .link-each-image {
-  width: 50px;   /* smaller picture */
-  height: 50px;
-  object-fit: cover;
-  border-radius: 6px;
+  width: 60px !important;
+  height: 60px !important;
+  border-radius: 8px !important;
+  object-fit: cover !important;  /* keeps it looking good in the square */
+  flex-shrink: 0 !important;
 }
 
-/* File text */
+/* File text on the right (blue like links) */
 .item-title {
-  font-size: 12px;   /* smaller text */
-  color: white;
-  font-family: 'Inter', sans-serif;
-  text-align: left;
+  color: #1a73e8 !important;     /* link blue */
+  font-size: 15px !important;
+  font-weight: 600 !important;
+  line-height: 1.2 !important;
+  font-family: 'Inter', sans-serif !important;
+  text-align: left !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+}
+
+/* Optional: tighter rows on very small phones */
+@media (max-width: 360px) {
+  .link-each-image { width: 52px !important; height: 52px !important; }
+  .item-title { font-size: 14px !important; }
 }
