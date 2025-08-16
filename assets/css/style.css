@@ -1,1 +1,227 @@
+/* ==========================
+   Global Styles
+========================== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+}
 
+body, html {
+  height: 100%;
+  background-color: #111;
+  color: white;
+}
+
+/* ==========================
+   Background Stars Animation
+========================== */
+.animated-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+}
+
+#stars1, #stars2, #stars3 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-repeat: repeat;
+  animation: moveStars 200s linear infinite;
+  opacity: 0.5;
+  background-image: radial-gradient(white, transparent 1px);
+}
+
+#stars1 { animation-duration: 200s; opacity: 0.3; }
+#stars2 { animation-duration: 400s; opacity: 0.2; }
+#stars3 { animation-duration: 600s; opacity: 0.1; }
+
+@keyframes moveStars {
+  from { transform: translateY(0); }
+  to { transform: translateY(-1000px); }
+}
+
+/* ==========================
+   Center Flex Layout
+========================== */
+.flex-h-center {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  min-height: 100vh;
+  padding-bottom: 50px;
+}
+
+.page-full-wrap {
+  width: 90%;
+  max-width: 900px;
+  margin: auto;
+}
+
+/* ==========================
+   Profile Image & Title
+========================== */
+.display-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #fff;
+  transition: transform 0.3s ease;
+}
+
+.display-image:hover {
+  transform: scale(1.05);
+}
+
+.page-title {
+  margin-top: 20px;
+  font-weight: 700;
+}
+
+/* ==========================
+   Active Now Dot
+========================== */
+.active-now {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  gap: 6px;
+  font-size: 14px;
+  color: #fff;
+}
+
+.sparkle-dot {
+  width: 10px;
+  height: 10px;
+  background: #0f0;
+  border-radius: 50%;
+  animation: pulse 1s infinite alternate;
+}
+
+@keyframes pulse {
+  from { transform: scale(0.8); opacity: 0.7; }
+  to { transform: scale(1.2); opacity: 1; }
+}
+
+/* ==========================
+   Social Icons
+========================== */
+.social-bounce {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.social-bounce a {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: white;
+  font-size: 14px;
+  text-decoration: none;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-bounce a img {
+  width: 20px;
+  height: 20px;
+  filter: brightness(0) invert(1);
+}
+
+.social-bounce a:hover {
+  transform: translateY(-3px);
+  color: #00f0ff;
+}
+
+/* ==========================
+   Search Bar
+========================== */
+.sticky-search {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  transition: all 0.3s ease;
+}
+
+.search-wrapper {
+  display: flex;
+  align-items: center;
+  background-color: #292929;
+  padding: 10px 16px;
+  border-radius: 25px;
+  gap: 8px;
+}
+
+.search-wrapper svg {
+  fill: #9D9D9D;
+}
+
+.search-wrapper input {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: white;
+  font-size: 16px;
+  width: 180px;
+  transition: width 0.3s ease;
+}
+
+.search-wrapper input:focus {
+  width: 250px;
+}
+
+/* ==========================
+   File Grid
+========================== */
+.file-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 16px;
+  margin-top: 30px;
+}
+
+.page-item-wrap {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.page-item-wrap:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.5);
+  z-index: 2;
+}
+
+.page-item-each {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  text-decoration: none;
+  color: white;
+}
+
+.link-each-image {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+/* ==========================
+   Responsive
+========================== */
+@media (max-width: 600px) {
+  .display-image { width: 120px; height: 120px; }
+  .search-wrapper input { width: 140px; }
+  .file-grid { grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); gap: 12px; }
+  .link-each-image { height: 100px; }
+}
