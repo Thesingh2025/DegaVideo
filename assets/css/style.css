@@ -225,7 +225,7 @@ body, html {
   .file-grid { grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); gap: 12px; }
   .link-each-image { height: 100px; }
 }
-/* Sticky and responsive search bar with compact height */
+/* Sticky, wide and short search bar */
 .sticky-search {
     position: sticky;
     top: 10px; /* distance from top */
@@ -233,20 +233,21 @@ body, html {
     display: flex;
     justify-content: center;
     width: 100%;
-    padding: 5px 0; /* smaller vertical padding for compact bar */
+    padding: 5px 0; /* small vertical padding for slim bar */
 }
 
 .sticky-search span {
     display: flex;
     align-items: center;
     background-color: #292929;
-    padding: 6px 12px; /* small vertical padding, more horizontal padding */
-    border-radius: 25px; /* rounded corners */
+    padding: 4px 16px; /* smaller vertical, larger horizontal padding */
+    border-radius: 25px;
     gap: 8px;
-    width: 95%; /* almost full screen width */
-    max-width: 600px; /* optional max width for large screens */
+    width: 98%; /* almost full width */
+    max-width: 1200px; /* optional max width for big screens */
     box-sizing: border-box;
     font-size: 16px;
+    height: 33px; /* compact vertical height */
 }
 
 .sticky-search input#searchInput {
@@ -257,6 +258,6 @@ body, html {
     outline: none;
     font-family: 'Inter', sans-serif;
     font-size: 16px;
-    height: 24px; /* compact vertical height */
-    width: auto; /* expands horizontally */
+    height: 25px; /* slightly smaller than span to fit nicely */
+    width: auto;
 }
