@@ -1769,7 +1769,7 @@ body,html{
   background: #1e1e1e;   /* dark box background */
   border-radius: 12px;   /* curved corners */
   padding: 10px 15px;
-  width: 130px;          /* box width */
+  width: 150px;          /* box width */
   display: flex;
   align-items: center;   /* align image + text vertically */
   gap: 12px;             /* space between image and text */
@@ -1783,8 +1783,8 @@ body,html{
 
 /* Image on the left */
 .link-each-image {
-  width: 70px;   /* smaller picture */
-  height: 40px;
+  width: 90px;   /* smaller picture */
+  height: 30px;
   object-fit: cover;
   border-radius: 8px;
 }
