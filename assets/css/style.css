@@ -1758,71 +1758,57 @@ body,html{
 }
 /* ===== Layout: 2 columns on phone, 4 on tablet/desktop ===== */
 .mt-24 {
-  display: grid !important;
-  grid-template-columns: repeat(2, minmax(0, 1fr)) !important; /* phone: 2 per row */
-  gap: 12px !important;
-  padding: 0 12px !important;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr)); /* phone: 2 per row */
+  gap: 12px;
+  padding: 0 12px;
 }
 @media (min-width: 768px) { /* iPad/desktop: 4 per row */
-  .mt-24 { grid-template-columns: repeat(4, minmax(0, 1fr)) !important; }
+  .mt-24 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
 }
 
-/* ===== Remove any old overlay box ===== */
-.page-item { 
-  display: none !important; 
-}
-
-/* ===== Card (white box container) ===== */
+/* ===== Card (the visible box) ===== */
 .page-item-wrap {
-  width: 100% !important;
-  background: #ffffff !important;      
-  border-radius: 12px !important;
-  border: none !important;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.12) !important;
-  overflow: hidden !important;
+  width: 100%;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+  overflow: hidden;
 }
 
-/* ===== Inside the card: image + text horizontally ===== */
+/* ===== Content inside card: image + text side by side ===== */
 .page-item-each {
-  display: flex !important;
-  align-items: center !important;
-  padding: 10px 12px !important;
-  text-decoration: none !important;
-  background: transparent !important;
-  border: none !important;
-  outline: none !important;
-  width: 100% !important;
-  box-shadow: none !important;
+  display: flex;
+  align-items: center;
+  padding: 10px 12px;
+  text-decoration: none;
+  background: transparent;
+  width: 100%;
+  box-shadow: none;
 }
 
-/* ===== Thumbnail (left) ===== */
+/* ===== Thumbnail on the left ===== */
 .link-each-image {
-  width: 60px !important;
-  height: 60px !important;
-  border-radius: 8px !important;
-  object-fit: cover !important;
-  flex-shrink: 0 !important;         /* don’t let image shrink */
-  margin-right: 10px !important;     /* space between image and text */
+  width: 60px;
+  height: 60px;
+  border-radius: 8px;
+  object-fit: cover;
+  flex-shrink: 0;           /* don’t let image shrink */
+  margin-right: 10px;       /* space between image and text */
 }
 
-/* ===== File text on the right (always visible) ===== */
+/* ===== File text on the right ===== */
 .item-title {
-  position: relative !important;   /* make sure it sits in normal flow */
-  z-index: 10 !important;          /* always above the image */
+  color: #1a73e8;           /* blue link color */
+  font-size: 15px;
+  font-weight: 600;
+  font-family: 'Inter', sans-serif;
+  text-align: left;
 
-  color: #1a73e8 !important;       /* blue like links */
-  font-size: 15px !important;
-  font-weight: 600 !important;
-  font-family: 'Inter', sans-serif !important;
-
-  text-align: left !important;     
-  margin-left: 8px !important;     /* space from image */
-
-  flex-grow: 1 !important;         
-  flex-basis: auto !important;
-  min-width: 60px !important;      
-
-  white-space: nowrap !important;
-  overflow: hidden !important;
-  text-overflow: ellipsis !important;
+  flex: 1;                  /* take remaining space */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
