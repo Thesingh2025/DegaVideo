@@ -1814,7 +1814,7 @@ body,html{
   font-family: 'Inter', sans-serif !important;
   text-align: left !important;
   
-  margin-left: 4px !important;   /* 👈 pushes text away from image */
+  margin-left: 6px !important;   /* 👈 pushes text away from image */
   white-space: nowrap !important;
   overflow: hidden !important;
   text-overflow: ellipsis !important;
