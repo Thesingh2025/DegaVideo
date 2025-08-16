@@ -1807,16 +1807,21 @@ body,html{
 
 /* ===== File text on the right (always visible) ===== */
 .item-title {
+  position: relative !important;   /* make sure it sits in normal flow */
+  z-index: 10 !important;          /* always above the image */
+
   color: #1a73e8 !important;       /* blue like links */
   font-size: 15px !important;
   font-weight: 600 !important;
   font-family: 'Inter', sans-serif !important;
-  text-align: left !important;     /* force left align */
-  
-  margin: 0 !important;
-  flex-grow: 1 !important;         /* takes remaining space */
+
+  text-align: left !important;     
+  margin-left: 8px !important;     /* space from image */
+
+  flex-grow: 1 !important;         
   flex-basis: auto !important;
-  min-width: 60px !important;      /* never shrinks to nothing */
+  min-width: 60px !important;      
+
   white-space: nowrap !important;
   overflow: hidden !important;
   text-overflow: ellipsis !important;
