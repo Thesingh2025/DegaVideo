@@ -239,11 +239,13 @@ body, html {
 .sticky-search span {
     display: flex;
     align-items: center;
+    justify-content: center;   /* ⬅️ Center everything inside */
     background-color: #292929;
     padding: 4px 12px;
     border-radius: 25px;
-    gap: 5px; /* ONLY 5px gap between "File-" and input */
-    width: auto; /* shrink to fit */
+    gap: 5px; /* distance between File- and input */
+    width: 98%; /* full width of screen */
+    max-width: 1200px;
     box-sizing: border-box;
     font-size: 16px;
     height: 33px;
@@ -265,7 +267,8 @@ body, html {
     font-family: 'Inter', sans-serif;
     font-size: 16px;
     height: 25px;
-    width: 200px;   /* fixed size, so it doesn’t push away */
+    width: 200px;   /* fixed width */
     margin: 0;
     padding: 0 5px;
+    text-align: left;
 }
