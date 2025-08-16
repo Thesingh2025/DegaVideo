@@ -231,48 +231,41 @@ body, html {
     top: 10px; /* distance from top */
     z-index: 999;
     display: flex;
-    justify-content: center;
+    justify-content: center; /* center whole bar */
     width: 100%;
-    padding: 5px 0; /* small vertical padding for slim bar */
+    padding: 5px 0;
 }
 
 .sticky-search span {
     display: flex;
     align-items: center;
+    justify-content: center; /* center content inside */
     background-color: #292929;
-    padding: 4px 16px; /* smaller vertical, larger horizontal padding */
+    padding: 4px 16px;
     border-radius: 25px;
-    gap: 1px;
-    width: 98%; /* almost full width */
-    max-width: 1200px; /* optional max width for big screens */
+    gap: 6px; /* small gap between File- and input */
+    width: 98%; /* full screen width */
+    max-width: 1200px;
     box-sizing: border-box;
     font-size: 16px;
-    height: 33px; /* compact vertical height */
+    height: 33px; /* slim */
+}
+
+.sticky-search span label {
+    margin: 0;
+    padding: 0;
+    color: white;
+    font-weight: 500; /* optional: make "File-" stand out */
 }
 
 .sticky-search input#searchInput {
-    flex: 1;
     background-color: transparent;
     color: white;
     border: none;
     outline: none;
     font-family: 'Inter', sans-serif;
     font-size: 16px;
-    height: 25px; /* slightly smaller than span to fit nicely */
-    width: auto;
-}
-/* Fix spacing inside search bar */
-.sticky-search span {
-    gap: 2px !important; /* almost no gap */
-    padding: 4px 10px;   /* tighter box */
-}
-
-.sticky-search span label {
-    margin: 0 !important;  /* remove extra margin on "File-" text */
-    padding: 0 !important; /* remove extra padding */
-}
-
-.sticky-search input#searchInput {
-    margin: 0 !important;  /* no extra space */
-    padding: 0 5px;        /* just small inner padding */
+    height: 25px;
+    width: 200px; /* fixed size instead of flex */
+    text-align: left; /* input text aligned normally */
 }
