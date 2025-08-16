@@ -149,7 +149,7 @@ body, html {
 }
 
 /* ==========================
-   Search Bar (One Black Rounded Box)
+   Sticky Search Bar
 ========================== */
 .sticky-search {
   position: sticky;
@@ -161,11 +161,11 @@ body, html {
   padding: 5px 0;
 }
 
-.sticky-search .search-box {
+.sticky-search .search-bar {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  background-color: #000;     /* ✅ Full black box */
+  background-color: #000;     /* ✅ Solid black background */
   padding: 8px 14px;
   border-radius: 25px;        /* ✅ Rounded edges */
   gap: 8px;
@@ -175,23 +175,27 @@ body, html {
   height: 40px;
 }
 
-.sticky-search .search-box label {
-  color: #fff;                /* ✅ File- text white */
+.sticky-search .search-bar svg {
+  flex-shrink: 0;
+}
+
+.sticky-search .search-bar label {
+  color: #fff;                /* ✅ File- text in white */
   font-weight: 500;
   white-space: nowrap;
   margin: 0;
   padding: 0;
 }
 
-.sticky-search .search-box input#searchInput {
-  background: transparent;    /* ✅ Input blends inside */
-  color: #fff;                /* ✅ White text */
+.sticky-search .search-bar input#searchInput {
+  background: transparent;    /* ✅ blends into black box */
+  color: #fff;                /* ✅ input text white */
   border: none;
   outline: none;
   font-family: 'Inter', sans-serif;
   font-size: 16px;
   height: 26px;
-  width: 100%;
+  width: 100%;                /* ✅ fill remaining space */
 }
 /* ==========================
    Active Now (Centered with Sparkling Green Dot)
