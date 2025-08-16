@@ -165,7 +165,7 @@ body, html {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #1e1e1e; /* ✅ restored dark grey/black */
+  background-color: #1e1e1e; /* ✅ dark grey/black background */
   padding: 4px 12px;
   border-radius: 25px;
   gap: 5px;
@@ -185,7 +185,7 @@ body, html {
 }
 
 .sticky-search input#searchInput {
-  background-color: transparent;
+  background-color: #1a1a1a; /* ✅ dark background inside input */
   color: white;
   border: none;
   outline: none;
@@ -196,8 +196,8 @@ body, html {
   margin: 0;
   padding: 0 5px;
   text-align: left;
+  border-radius: 6px; /* ✅ subtle rounded edges */
 }
-
 /* ==========================
    File Grid
 ========================== */
