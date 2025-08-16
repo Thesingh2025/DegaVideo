@@ -1756,21 +1756,20 @@ body,html{
   0%, 100% { transform: scale(1); opacity: 1; }
   50% { transform: scale(1.1); opacity: 0.7; }
 }
-/* Container that holds all your file items */
+/* Container for all file boxes */
 .mt-24 {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
-  gap: 20px; /* space between boxes */
-  padding: 20px;
-  justify-items: center; /* center items in each grid cell */
+  display: flex;
+  flex-wrap: wrap;   /* allows items to go to next line */
+  gap: 20px;         /* space between boxes */
+  justify-content: center; /* center them */
 }
 
 /* Each file box */
 .page-item-wrap {
-  background: #ffffff10; /* transparent white effect */
+  background: #ffffff10; 
   border-radius: 10px;
   padding: 10px;
-  width: 220px;   /* fixed width so all boxes look same */
+  width: 180px;   /* fixed width for each box */
   text-align: center;
   box-shadow: 0 4px 12px rgba(0,0,0,0.2);
   transition: transform 0.2s ease-in-out;
@@ -1780,18 +1779,19 @@ body,html{
   transform: scale(1.05);
 }
 
-/* Images inside boxes */
+/* Image inside the box */
 .link-each-image {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-  object-fit: cover; /* keeps proper size without distortion */
+  width: 160px;   /* fix image width */
+  height: 100px;  /* fix image height */
+  object-fit: cover; /* keeps proportion but crops if needed */
+  border-radius: 6px;
 }
 
 /* File text under image */
 .item-title {
+  display: block;
   margin-top: 8px;
-  font-size: 16px;
+  font-size: 15px;
   color: white;
   font-family: 'Inter', sans-serif;
 }
